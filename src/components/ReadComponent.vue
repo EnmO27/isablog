@@ -1,15 +1,8 @@
 <template>
   <div>
-
-    <div v-for="(content, index) of blogContent" :key="index" class="mb-5">
-      <div class="mb-4">
-        <a :href="`#/read/${content.id}`"><h3 style="text-align: start;" class="ml-5 mb-1 font-weight-bolder">{{ content.title }}</h3></a>
-        <p style="text-align: start;" class="ml-5">{{ `${content.date} por ${content.author}` }}</p>
-      </div>
-
-      <img class="w-80" :src="content.image" />
-      <p style="text-align: start;" class="px-5 m-5">{{ content.description }}</p>
-    </div>
+    <div v-if="article">
+    <h1>{{ article.title }}</h1>
+  </div>
 
   </div>
 </template>
@@ -18,15 +11,16 @@
 export default {
   data() {
     return {
+      article: null,
       blogContent: [
-
         {
           id: 1,
           title: 'Gestión del talento humano y su evolución histórica',
           date: 'Mayo 21, 2020',
           author: 'Isabella Paez',
           image: 'https://www.endalia.com/wp-content/uploads/historia-de-los-recursos-humanos-702x300.jpg.webp',
-          description: 'Los Recursos Humanos tienen cerca de dos siglos de historia. Con motivo del Día Internacional de los Recursos Humanos, que se celebra cada 20 de mayo, hacemos un breve recorrido por los hitos más importantes de esta profesión, que ha ido evolucionando y adaptándose a la situación del mundo.'
+          description: 'Los Recursos Humanos tienen cerca de dos siglos de historia. Con motivo del Día Internacional de los Recursos Humanos, que se celebra cada 20 de mayo, hacemos un breve recorrido por los hitos más importantes de esta profesión, que ha ido evolucionando y adaptándose a la situación del mundo.',
+          wholeText: ''
         },
         {
           id: 2,
@@ -36,13 +30,20 @@ export default {
           image: 'https://www.endalia.com/wp-content/uploads/historia-de-los-recursos-humanos-702x300.jpg.webp',
           description: 'Los Recursos Humanos tienen cerca de dos siglos de historia. Con motivo del Día Internacional de los Recursos Humanos, que se celebra cada 20 de mayo, hacemos un breve recorrido por los hitos más importantes de esta profesión, que ha ido evolucionando y adaptándose a la situación del mundo. Hasta llegar al momento actual en plena Revolución Digital.'
         },
-
       ]
     }
   },
-  name: 'HelloWorld',
+  name: 'ReadComponent',
   props: {
     msg: String
+  },
+  mounted() {
+      let idParam = this.$route.params.id
+      let inFactArticle = this.blogContent.find(element => element.id == idParam)
+      console.log(idParam)
+      console.log(inFactArticle)
+      this.article = inFactArticle
+    
   }
 }
 </script>
@@ -64,6 +65,6 @@ li {
 }
 
 a {
-  color: #0086ff;
+  color: #42b983;
 }
 </style>

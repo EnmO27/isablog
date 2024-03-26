@@ -1,12 +1,68 @@
 <template>
   <div id="app">
     <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <b-row class="pr-5 pl-5" style="background-color: #02023b">
+        <b-col class="p-4" md="2">
+          <img src="./assets/HUMAN.png" style="width: 60%" />
+        </b-col>
+
+        <b-col class="p-5 d-flex justify-content-end align-items-center" md="10">
+          <router-link class="mr-3" to="/">Inicio</router-link> |
+          <router-link class="mr-3" to="/about">Sobre nosotros</router-link>
+          <router-link class="mr-3" to="/about">Contacto</router-link>
+        </b-col>
+      </b-row>
     </nav>
-    <router-view/>
+    <div>
+      <b-row>
+        <b-col md="8">
+          <router-view />
+        </b-col>
+
+        <b-col class="p-5" style="background-color: #0086ff" md="4">
+          <div class="d-flex">
+            <b-form-input placeholder="Buscar"></b-form-input>
+            <b-button>Buscar</b-button>
+          </div>
+          <hr>
+
+          <div>
+            <h5 style="text-align: start" class="font-weight-bolder text-white">Subscribete por Email</h5>
+          </div>
+
+          <div class="d-flex">
+            <b-form-input placeholder="Email"></b-form-input>
+            <b-button>Ir</b-button>
+          </div>
+
+          <hr>
+
+          <h5 style="text-align: start" class="font-weight-bolder text-white">Posts destacados</h5>
+          <div class="w-100" style="height: 600px; background-color: white; border-radius: 20px;">
+
+          </div>
+        </b-col>
+
+        
+      </b-row>
+    </div>
   </div>
 </template>
+
+<script>
+import { BCol, BRow, BFormInput, BButton } from 'bootstrap-vue'
+
+export default {
+
+  components: {
+    BCol,
+    BRow,
+    BFormInput,
+    BButton
+  }
+
+}
+</script>
 
 <style>
 #app {
@@ -17,16 +73,12 @@
   color: #2c3e50;
 }
 
-nav {
-  padding: 30px;
-}
-
 nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: #FFFFFF;
 }
 
 nav a.router-link-exact-active {
-  color: #42b983;
+  color: #f84fff;
 }
 </style>
