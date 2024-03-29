@@ -101,7 +101,7 @@ En resumen, la gestión del talento humano ya no se trata solo de administrar re
           title: 'Enfoque Estratégico: Desglosando los Pilares del Éxito Empresarial',
           date: 'Junio 21, 2020',
           author: 'Emily Penzo',
-          image: 'https://lh3.googleusercontent.com/proxy/r7RuN8cB9pt-uUl8F7p88sY80TJEGiPnsIGZViRm3aYPYjcDMLHFOl20k1Fmv3vNux1i-ud-n2WVufpiQrVgt2N5ZcYi2xI6L5CTcVRlaexV6NRlIH6baog78iahKLzURRwkQ8Cr1LO-yaErPTpM',
+          image: 'https://static.vecteezy.com/system/resources/previews/002/136/634/non_2x/business-success-concept-business-people-climb-the-bar-graph-through-a-column-by-column-for-their-success-illustration-vector.jpg',
           description: 'En el ámbito empresarial, es crucial entender los diferentes aspectos que contribuyen al crecimiento y desarrollo de una organización',
           wholeText: `<p style="text-align: left">En el ámbito empresarial, es crucial entender los diferentes aspectos que contribuyen al crecimiento y desarrollo de una organización. Uno de estos aspectos es el “ENFOQUE”, que se divide en cuatro categorías principales:<br><br>
 
@@ -492,6 +492,58 @@ Fuente: Desarrollada por Abraham Maslow en 1943, la teoría de la jerarquía de 
 <strong>3. Crecimiento:</strong> Representa el deseo intrínseco de desarrollo personal. Es similar a las necesidades internas de estima y autorrealización en la teoría de Maslow. En este nivel, aspiramos a crecer, aprender y alcanzar nuestro potencial máximo.<br><br>
 Es relevante destacar que más de una necesidad puede operar simultáneamente. La teoría ERC proporciona una perspectiva interesante sobre cómo las personas buscan satisfacer sus necesidades y cómo estas se entrelazan en nuestra vida cotidiana.</p>`
         },
+        {
+          id: 20,
+          title: 'Descifrando la Motivación: Una Mirada a la Teoría de David McClelland',
+          date: 'Septiembre 04, 2020',
+          author: 'Helenne Ocanto',
+          image: 'https://impulso06.com/wp-content/uploads/2023/11/La-importancia-de-la-motivacion-en-el-aula-estrategias-para-el-exito-en-primaria-e-infantil.png',
+          description: 'En el apasionante mundo de la psicología y la gestión, la motivación es un tema central. ¿Qué impulsa a las personas a actuar, a esforzarse y a alcanzar sus objetivos? En 1961, el psicólogo David McClelland presentó una teoría que arroja luz sobre estas cuestiones.',
+          wholeText: `<p style="text-align: left">En el apasionante mundo de la psicología y la gestión, la motivación es un tema central. ¿Qué impulsa a las personas a actuar, a esforzarse y a alcanzar sus objetivos? En 1961, el psicólogo David McClelland presentó una teoría que arroja luz sobre estas cuestiones. En este artículo, exploraremos la Teoría de las Necesidades de McClelland y cómo ha influido en la comprensión de la motivación humana.<br><br>
+
+<strong>Las Tres Necesidades Fundamentales</strong><br>
+McClelland identificó tres necesidades adquiridas que desempeñan un papel crucial en nuestra motivación:<br><br>
+
+<strong>1. Necesidad de Logros (nAch):</strong> Esta necesidad se refiere al deseo innato de superar desafíos y alcanzar un alto estándar de excelencia. Las personas con una alta nAch buscan constantemente maneras de mejorar y son persistentes en sus esfuerzos por alcanzar sus metas. Imagina a un escalador que se esfuerza por conquistar la cima de una montaña imponente; esa es la esencia de la nAch.<br><br>
+<strong>2. Necesidad de Poder (nPow):</strong> Aquí entramos en el terreno de la influencia y la dirección. Las personas con una alta nPow están motivadas por la oportunidad de ejercer control y liderazgo. Les atraen las posiciones donde pueden tomar decisiones importantes y afectar el comportamiento de otros. Piensa en un líder carismático que guía a su equipo hacia el éxito; esa es la nPow en acción.<br><br>
+<strong>3. Necesidad de Afiliación (nAff):</strong> Esta necesidad se centra en las relaciones interpersonales. Aquellos con una alta nAff valoran las conexiones humanas y buscan ambientes colaborativos. Les motiva trabajar en equipo y establecer vínculos significativos. Imagina a un mentor que se preocupa por el bienestar de sus colegas; eso es la nAff en su esplendor.<br><br>
+<strong>Implicaciones para la Gestión</strong><br><br>
+McClelland argumentó que los mejores gerentes tienden a tener una alta necesidad de poder y baja afiliación. Están motivados por el logro personal, pero también reconocen la importancia del empoderamiento colectivo. Estos líderes inspiran a sus equipos, toman decisiones audaces y crean un entorno donde la excelencia florece.<br><br>
+
+En resumen, la Teoría de las Necesidades de McClelland nos recuerda que la motivación es un mosaico complejo de impulsos internos. Al comprender estas necesidades fundamentales, podemos diseñar estrategias efectivas para motivar a las personas en el trabajo, en el deporte y en la vida cotidiana.</p>`
+        },
+        {
+          id: 21,
+          title: 'Desentrañando la Teoría de los Dos Factores de la Motivación',
+          date: 'Septiembre 12, 2020',
+          author: 'Isabella Paez',
+          image: 'https://www.userlike.com/api/proxy/resize/medicion-de-la-satisfaccion-del-cliente/measuring.png?height=720',
+          description: 'En 1959, el psicólogo Frederick Herzberg introdujo una teoría revolucionaria que ha tenido un profundo impacto en nuestra comprensión de la motivación y las actitudes humanas hacia el trabajo. Esta teoría, conocida como la Teoría de los Dos Factores, propone que existen dos categorías distintas de factores que influyen en nuestra motivación y satisfacción en el trabajo.',
+          wholeText: `<body style="text-align: left">
+    <p style="text-align: left">En 1959, el psicólogo Frederick Herzberg introdujo una teoría revolucionaria que ha tenido un profundo impacto en nuestra comprensión de la motivación y las actitudes humanas hacia el trabajo. Esta teoría, conocida como la <strong>Teoría de los Dos Factores</strong>, propone que existen dos categorías distintas de factores que influyen en nuestra motivación y satisfacción en el trabajo.</p>
+    <h5 style="text-align: left; font-weight: bolder">Factores Higiénicos (Factores Externos)</h5>
+    <p style="text-align: left">Estos factores se refieren a las condiciones externas que rodean al individuo mientras trabaja. Aunque no tienen la capacidad directa de motivar, son cruciales para prevenir la insatisfacción. Algunos ejemplos de factores higiénicos incluyen:</p>
+    <ul style="text-align: left">
+        <li>Condiciones de Trabajo: El entorno físico en el que se desempeña el trabajo, como la iluminación, la temperatura y la comodidad.</li>
+        <li>Políticas Organizacionales: Las reglas y regulaciones establecidas por la empresa.</li>
+        <li>Relación con el Supervisor: La calidad de la relación entre el empleado y su jefe.</li>
+        <li>Competencia Técnica del Supervisor: La habilidad del supervisor para guiar y apoyar al empleado.</li>
+        <li>Salarios y Beneficios: La compensación económica y los incentivos ofrecidos.</li>
+        <li>Estabilidad en el Cargo: La seguridad laboral y la perspectiva de permanencia en el puesto.</li>
+    </ul>
+    <p style="text-align: left">Aunque estos factores higiénicos no aumentan directamente la satisfacción laboral, su ausencia puede llevar a la insatisfacción. Son esenciales pero no suficientes para motivar a los empleados a alcanzar niveles superiores de rendimiento y satisfacción.</p>
+    <h5 style="text-align: left; font-weight: bolder">Factores Motivadores (Factores Internos)</h5>
+    <p style="text-align: left">Estos factores están relacionados con el contenido real del trabajo y su impacto en el individuo. Los factores motivadores son los que verdaderamente generan satisfacción y motivación. Algunos ejemplos de factores motivadores incluyen:</p>
+    <ul style="text-align: left">
+        <li>Logro Personal: La sensación de logro y éxito en el trabajo.</li>
+        <li>Reconocimiento: La apreciación y el reconocimiento por el esfuerzo y los logros.</li>
+        <li>Responsabilidad: La oportunidad de asumir responsabilidades y desafíos.</li>
+        <li>Crecimiento y Desarrollo: La posibilidad de aprender y crecer profesionalmente.</li>
+        <li>Trabajo Interesante: La naturaleza estimulante e interesante de las tareas laborales.</li>
+    </ul>
+    <p style="text-align: left">Según Herzberg, estos factores motivadores son los que realmente impulsan la satisfacción y la motivación en el trabajo. Son intrínsecos y se relacionan directamente con la experiencia laboral.</p>
+</body>`
+        },
       ]
     }
   },
@@ -511,8 +563,7 @@ Es relevante destacar que más de una necesidad puede operar simultáneamente. L
       console.log(inFactArticle)
       this.article = inFactArticle
 
-      let wholeElement = document.getElementById('wholeContainer')
-      wholeElement.innerHTML = this.article.wholeText
+      window.scroll(0, 100)
     }
   },
 

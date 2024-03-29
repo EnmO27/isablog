@@ -3,7 +3,7 @@
 
     <div v-for="(content, index) of pageItems" :key="index" class="mb-5">
       <div class="mb-4">
-        <a :href="`#/read/${content.id}`">
+        <a :href="`#/read/${content.id}`" class="blog-title">
           <h3 style="text-align: start; color: #02023b" class="ml-5 mb-1 font-weight-bolder">{{ content.title }}</h3>
         </a>
         <p style="text-align: start;" class="ml-5">{{ `${content.date} por ${content.author}` }}</p>
@@ -14,7 +14,7 @@
     </div>
 
     <div class="mt-3">
-      <b-pagination @change="pageChanged" v-model="currentPage" page-class="pagination-thing" :per-page="perPage" :total-rows="rows" align="center"></b-pagination>
+      <b-pagination @change="pageChanged" limit="6" v-model="currentPage" page-class="pagination-thing" :per-page="perPage" :total-rows="rows" align="center"></b-pagination>
     </div>
 
   </div>
@@ -29,6 +29,7 @@ export default {
       rows: null,
       // currentPage: 1,
       perPage: 4,
+      loaded: true,
       blogPage: null,
       blogContent: [
 
@@ -105,7 +106,7 @@ En resumen, la gestión del talento humano ya no se trata solo de administrar re
           title: 'Enfoque Estratégico: Desglosando los Pilares del Éxito Empresarial',
           date: 'Junio 21, 2020',
           author: 'Emily Penzo',
-          image: 'https://lh3.googleusercontent.com/proxy/r7RuN8cB9pt-uUl8F7p88sY80TJEGiPnsIGZViRm3aYPYjcDMLHFOl20k1Fmv3vNux1i-ud-n2WVufpiQrVgt2N5ZcYi2xI6L5CTcVRlaexV6NRlIH6baog78iahKLzURRwkQ8Cr1LO-yaErPTpM',
+          image: 'https://static.vecteezy.com/system/resources/previews/002/136/634/non_2x/business-success-concept-business-people-climb-the-bar-graph-through-a-column-by-column-for-their-success-illustration-vector.jpg',
           description: 'En el ámbito empresarial, es crucial entender los diferentes aspectos que contribuyen al crecimiento y desarrollo de una organización',
           wholeText: `<p style="text-align: left">En el ámbito empresarial, es crucial entender los diferentes aspectos que contribuyen al crecimiento y desarrollo de una organización. Uno de estos aspectos es el “ENFOQUE”, que se divide en cuatro categorías principales:<br><br>
 
@@ -254,40 +255,40 @@ En resumen, un reclutamiento efectivo implica una combinación de estrategias, h
           title: 'Evaluación del Desempeño en la Gestión del Talento Humano',
           date: 'Julio 16, 2020',
           author: 'Daniela Romero',
-          image: 'https://wortev.com/wp-content/uploads/2023/04/consejos-para-estimular-la-capacitacion-laboral-WORTEV.jpg',
+          image: 'https://www.questionpro.com/blog/wp-content/uploads/2020/05/1375.jpg',
           description: 'La evaluación del desempeño es un proceso fundamental en la gestión del talento humano. Permite medir y valorar la actuación de cada persona dentro de una organización, considerando diversos aspectos como las actividades que desempeña, las metas que debe alcanzar, las competencias que ofrece y su potencial de desarrollo.',
-          wholeText: `<body><h1>Evaluación del Desempeño en la Gestión del Talento Humano</h1>
-    <p>La <strong>evaluación del desempeño</strong> es un proceso fundamental en la gestión del talento humano. Permite medir y valorar la actuación de cada persona dentro de una organización, considerando diversos aspectos como las actividades que desempeña, las metas que debe alcanzar, las competencias que ofrece y su potencial de desarrollo. En este artículo, exploraremos los métodos más comunes utilizados para evaluar el desempeño de los empleados.</p>
+          wholeText: `<body>
+    <p style="text-align: left">La <strong>evaluación del desempeño</strong> es un proceso fundamental en la gestión del talento humano. Permite medir y valorar la actuación de cada persona dentro de una organización, considerando diversos aspectos como las actividades que desempeña, las metas que debe alcanzar, las competencias que ofrece y su potencial de desarrollo. En este artículo, exploraremos los métodos más comunes utilizados para evaluar el desempeño de los empleados.</p>
 
-    <h2>Métodos de Evaluación del Desempeño</h2>
-    <ol>
-        <li><strong>Escala Gráfica:</strong>
+    <h5 style="text-align: left">Métodos de Evaluación del Desempeño</h5>
+    <ol style="text-align: left"><br><br>
+        <li><strong>Escala Gráfica:</strong><br><br>
             <ul>
                 <li>Este método implica medir el cumplimiento de criterios básicos o factores de importancia para la organización. Se utiliza una escala numérica o gráfica para calificar el desempeño de los empleados en diferentes áreas.</li>
                 <li>Por ejemplo, se pueden evaluar habilidades técnicas, habilidades interpersonales, puntualidad y otros aspectos relevantes.</li>
             </ul>
-        </li>
-        <li><strong>Elección Forzada:</strong>
+        </li><br><br>
+        <li><strong>Elección Forzada:</strong><br><br>
             <ul>
                 <li>En este enfoque, se presentan bloques de frases descriptivas relacionadas con el comportamiento de los empleados.</li>
                 <li>Los evaluadores deben elegir entre opciones predefinidas que describen el desempeño de manera positiva o negativa.</li>
                 <li>Este método ayuda a evitar respuestas neutrales y fomenta una evaluación más precisa.</li>
             </ul>
-        </li>
-        <li><strong>Incidentes Críticos:</strong>
+        </li><br><br>
+        <li><strong>Incidentes Críticos:</strong><br><br>
             <ul>
                 <li>El método de incidentes críticos se basa en situaciones extremas que representan desempeños sumamente positivos (éxitos) o negativos (fracasos).</li>
                 <li>No se centra en el desempeño cotidiano, sino en momentos excepcionales que impactan significativamente en el trabajo.</li>
             </ul>
-        </li>
-        <li><strong>Comparación por Pares:</strong>
+        </li><br><br>
+        <li><strong>Comparación por Pares:</strong><br><br>
             <ul>
                 <li>Aquí, se compara el cumplimiento de criterios específicos entre dos empleados.</li>
                 <li>Los evaluadores deben determinar cuál de los dos empleados muestra un mejor desempeño en áreas clave.</li>
                 <li>Es importante definir previamente los criterios de comparación.</li>
             </ul>
-        </li>
-        <li><strong>Evaluación 360°:</strong>
+        </li><br><br>
+        <li><strong>Evaluación 360°:</strong><br><br>
             <ul>
                 <li>Este enfoque se llama así porque involucra a todas las partes que interactúan con el empleado: superiores, pares y subordinados.</li>
                 <li>Se recopilan opiniones y retroalimentación de diversas fuentes para obtener una visión completa del desempeño.</li>
@@ -296,12 +297,258 @@ En resumen, un reclutamiento efectivo implica una combinación de estrategias, h
         </li>
     </ol>
 
-    <h2>Importancia de la Evaluación del Desempeño</h2>
-    <p>La evaluación del desempeño no solo permite tomar decisiones sobre ascensos, bonificaciones o capacitación, sino que también contribuye a:</p>
-    <ul>
-        <li>Identificar fortalezas y</li></ul></body>`
-        },
+    <h5 style="text-align: left">Importancia de la Evaluación del Desempeño</h5>
+    <p style="text-align: left">La evaluación del desempeño no solo permite tomar decisiones sobre ascensos, bonificaciones o capacitación, sino que también contribuye a:</p>
+    <ul style="text-align: left">
+        <li>Identificar fortalezas y debilidades individuales.</li>
+        <li>Establecer planes de desarrollo personalizado.</li>
+        <li>Motivar a los empleados al reconocer sus logros.</li>
+        <li>Mejorar la comunicación y la colaboración en la organización.</li>
 
+        
+        </ul>
+        <p style="text-align: left">En resumen, una evaluación efectiva del desempeño es esencial para el crecimiento y el éxito tanto de los empleados como de la empresa. Al implementar métodos adecuados y brindar retroalimentación constructiva, las organizaciones pueden maximizar el potencial de su talento humano.</p>
+        </body>`
+        },
+        {
+          id: 12,
+          title: 'Calidad de Vida en el Trabajo: Un Enfoque Integral',
+          date: 'Julio 22, 2020',
+          author: 'Kimberlyn Giménez',
+          image: 'https://possitiva.com/wp-content/uploads/2023/03/plano-medio-colegas-felices-1.jpg',
+          description: 'La calidad de vida en el trabajo es un aspecto crucial que afecta directamente el desempeño y bienestar de los empleados en sus puestos laborales. En este artículo, exploraremos los componentes clave de la calidad de vida en el trabajo y cómo un enfoque integral puede contribuir al bienestar general.',
+          wholeText: `
+          <body>
+            <p style="text-align: left">
+            La calidad de vida en el trabajo es un aspecto crucial que afecta directamente el desempeño y bienestar de los empleados en sus puestos laborales. En este artículo, exploraremos los componentes clave de la calidad de vida en el trabajo y cómo un enfoque integral puede contribuir al bienestar general.<br><br>
+
+<h4 style="text-align: left">Componentes Clave</h4><br><br><p style="text-align: left">
+<strong>1.- Satisfacción con la Tarea Ejecutada:</strong> La percepción positiva de las tareas realizadas está estrechamente relacionada con la eficiencia y productividad de los empleados. Cuando los trabajadores se sienten satisfechos con su labor, tienden a rendir mejor.<br><br>
+<strong>2.- Posibilidad de Carrera:</strong> Ofrecer oportunidades de crecimiento profesional y personal es esencial. Los empleados deben sentir que tienen un camino claro para avanzar en su carrera dentro de la organización.<br><br>
+<strong>3.- Compensaciones:</strong> Tanto las retribuciones económicas como las no monetarias (como reconocimientos y beneficios) son fundamentales para que los empleados se sientan valorados y motivados.<br><br>
+<strong>4.- Relaciones Humanas:</strong> Un ambiente laboral positivo se construye sobre relaciones colaborativas. La comunicación efectiva y el apoyo entre colegas contribuyen a un clima organizacional saludable.<br><br>
+<strong>5.- Entorno Físico y Psicológico:</strong> El espacio de trabajo debe ser saludable y estimulante. Un lugar limpio, bien iluminado y cómodo promueve la productividad y el bienestar mental.<br><br>
+<strong>6.- Comunicación y Autonomía:</strong> La posibilidad de expresarse y tomar decisiones en el trabajo es esencial. La autonomía permite que los empleados se sientan empoderados y comprometidos.<br><br></p>
+<p style="text-align: left">La calidad de vida en el trabajo no se limita a un solo aspecto; es un conjunto de factores interrelacionados. Cuando se abordan todos estos componentes de manera integral, se fomenta el bienestar psicológico, económico y social de los trabajadores. Una fuerza laboral feliz y saludable es más productiva y contribuye al éxito de la organización.</p>
+        </p></body>`
+        },
+        {
+          id: 13,
+          title: 'Liderazgo: Forjando Caminos hacia el Éxito',
+          date: 'Agosto 02, 2020',
+          author: 'José Vargas',
+          image: 'https://cbaglobal.com.ar/wp-content/uploads/2021/12/3.jpg',
+          description: 'El liderazgo es un concepto fundamental en el mundo empresarial y organizacional. Se trata de la capacidad de influir en las personas para alcanzar las metas y objetivos de una empresa o equipo.',
+          wholeText: `<body>
+    <p style="text-align: left">El liderazgo es un concepto fundamental en el mundo empresarial y organizacional. Se trata de la capacidad de influir en las personas para alcanzar las metas y objetivos de una empresa o equipo. A lo largo de la historia, se han propuesto diversas definiciones y enfoques sobre el liderazgo. Dos perspectivas destacadas son las de Daft (2005) y Hellriegel (2009).</p>
+    <h5 style="text-align: left; font-weight: bolder">La Perspectiva de Daft (2005)</h5>
+    <p style="text-align: left">Según Daft, el liderazgo es la habilidad de guiar, motivar y dirigir a otros hacia el logro de objetivos comunes. El líder debe ser capaz de inspirar confianza, comunicarse efectivamente y tomar decisiones estratégicas. En esta visión, el liderazgo se centra en la acción y la influencia positiva.</p>
+    <h5 style="text-align: left; font-weight: bolder">La Perspectiva de Hellriegel (2009)</h5>
+    <p style="text-align: left">Hellriegel enfatiza la relación entre el líder y los seguidores. Para él, el liderazgo es una conexión poderosa que impulsa el cambio y genera resultados significativos. El líder no solo busca cumplir metas, sino también crear un impacto duradero en la organización y en las personas que la conforman.</p>
+    <p style="text-align: left">En resumen, el liderazgo no se trata solo de títulos o jerarquías, sino de la capacidad de inspirar, motivar y guiar a otros hacia un propósito compartido. Los líderes efectivos cultivan relaciones sólidas, fomentan la colaboración y crean un entorno propicio para el crecimiento y la innovación.</p>
+    <h5 style="text-align: left; font-weight: bolder">¿Cómo se Aplica esto en la Práctica?</h5>
+    <ul style="text-align: left">
+        <li><strong>Comunicación:</strong> Los líderes deben ser excelentes comunicadores. Escuchar activamente, expresar ideas con claridad y fomentar un diálogo abierto son habilidades esenciales.</li>
+        <li><strong>Empatía:</strong> Comprender las necesidades y preocupaciones de los demás es crucial para construir relaciones sólidas. La empatía permite adaptar el liderazgo a las circunstancias individuales.</li>
+        <li><strong>Visión:</strong> Los líderes deben tener una visión clara y compartirla con su equipo. Inspirar a otros con un propósito significativo es fundamental.</li>
+        <li><strong>Toma de Decisiones:</strong> Los líderes enfrentan decisiones constantemente. Evaluar opciones, considerar consecuencias y actuar con integridad es esencial.</li>
+    </ul>
+    <p style="text-align: left">En conclusión, el liderazgo es un viaje continuo de aprendizaje y crecimiento. Cada líder tiene la oportunidad de marcar la diferencia y dejar una huella positiva en su entorno.</p>
+</body>`
+        },
+        {
+          id: 14,
+          title: 'Explorando los Estilos de Liderazgo: Un Vistazo al Modelo de la Universidad de Iowa',
+          date: 'Agosto 07, 2020',
+          author: 'Emily Penzo',
+          image: 'https://a.travel-assets.com/findyours-php/viewfinder/images/res70/268000/268912-Iowa.jpg',
+          description: 'En el ámbito del liderazgo organizacional, es crucial entender los diferentes estilos y enfoques que pueden adoptar los líderes para maximizar la eficiencia y la productividad del equipo. En un estudio realizado por la Universidad de Iowa, se exploraron tres tipos distintos de liderazgo para determinar cuál era el más efectivo.',
+          wholeText: `<body>
+    <p style="text-align: left">En el ámbito del liderazgo organizacional, es crucial entender los diferentes estilos y enfoques que pueden adoptar los líderes para maximizar la eficiencia y la productividad del equipo. En un estudio realizado por la Universidad de Iowa, se exploraron tres tipos distintos de liderazgo para determinar cuál era el más efectivo.<br><br>
+
+<strong>Líder Democrático</strong><br>
+Este estilo implica involucrar a los subordinados en el proceso decisional, delegando autoridad y promoviendo la participación activa. Es un enfoque inclusivo que valora las opiniones y perspectivas diversas para llegar a decisiones consensuadas.<br><br>
+
+<strong>Líder Autocrático</strong><br>
+A diferencia del líder democrático, el líder autocrático centraliza la toma de decisiones y dicta métodos de trabajo. Este enfoque limita la participación activa de los subordinados, poniendo énfasis en la dirección unilateral.<br><br>
+
+<strong>Líder Liberal</strong><br>
+El líder liberal da libertad al grupo para tomar decisiones y completar el trabajo según consideren adecuado. Este estilo minimiza la intervención directa del líder en las operaciones diarias, permitiendo una mayor autonomía del equipo.<br><br>
+
+Tras una evaluación exhaustiva, se concluyó que el estilo democrático es generalmente el más efectivo. Sin embargo, otros estudios han arrojado resultados mixtos, indicando que no existe un “tamaño único” cuando se trata de liderazgo efectivo.</p>
+</body>`
+        },
+        {
+          id: 15,
+          title: 'Participación y Efectividad: Explorando el Modelo de Liderazgo Vroom-Yetton-Jago',
+          date: 'Agosto 12, 2020',
+          author: 'Helenne Ocanto',
+          image: 'https://pinguinodigital.com/wp-content/uploads/2022/10/como-se-puede-mejorar-el-liderazgo-1.jpg',
+          description: 'El modelo de liderazgo participativo de Vroom y Yetton, también conocido como Modelo Vroom-Yetton-Jago, es un enfoque utilizado en la toma de decisiones y la gestión de liderazgo en el ámbito empresarial. Fue creado por Victor Vroom y Phillip Yetton en la década de 1970, y más tarde fue mejorado por Arthur Jago en la década de 1980',
+          wholeText: `<body>
+    <p style="text-align: left">El modelo de liderazgo participativo de Vroom y Yetton, también conocido como Modelo Vroom-Yetton-Jago, es un enfoque utilizado en la toma de decisiones y la gestión de liderazgo en el ámbito empresarial. Fue creado por Victor Vroom y Phillip Yetton en la década de 1970, y más tarde fue mejorado por Arthur Jago en la década de 1980.<br><br>
+
+Este modelo se centra en la relación entre liderazgo y participación. A continuación, exploraremos los aspectos clave del modelo y los diferentes tipos de liderazgo que propone.<br><br>
+
+<strong>¿Qué es el modelo de liderazgo participativo de Vroom y Yetton?</strong><br><br>
+El modelo de liderazgo participativo se enfoca en cómo el líder permite la participación de sus subordinados e influye en ellos durante la toma de decisiones. Algunos supuestos importantes en la aplicación de este método son:<br><br>
+
+1. La conducta del líder debe ser específica y no admitir confusión.<br>
+2. No se puede aplicar el mismo método de liderazgo a todas las situaciones por igual.<br>
+3. El contexto y el problema deben evaluarse para determinar el enfoque adecuado.<br>
+4. El método utilizado en una situación debe ser independiente del utilizado en otra circunstancia distinta.<br>
+5. Existen procesos sociales mediante los cuales los subordinados pueden resolver problemas.<br>
+6. El método de liderazgo varía según el número de subordinados.<br><br>
+<strong>Tipos de liderazgo según el grado de participación</strong><br>
+Según el grado de participación de los subordinados y el modo de orientar la tarea y tomar decisiones, podemos identificar cinco tipos distintos de liderazgo:<br><br>
+
+<strong>1. Liderazgo de mayorías:</strong> En este enfoque, se busca llegar a un consenso entre los trabajadores. El líder considera y escucha las opiniones de todos, tanto de los subordinados como de sí mismo, para lograr un resultado aceptado por todos.<br><br>
+<strong>2. Liderazgo colaborativo:</strong> Aquí también se valora la opinión de los trabajadores, pero se diferencia según las funciones y responsabilidades individuales.<br><br>
+<strong>3. Estilo que Decide:</strong> El líder toma la decisión y la comunica al equipo.<br><br>
+<strong>4. Estilo de Consulta Individual:</strong> El líder consulta o expone el problema por separado a los miembros del grupo antes de tomar una decisión.<br><br>
+<strong>5. Estilo Facilitador:</strong> El líder presenta el problema al equipo como un miembro más, escucha sugerencias y toma una decisión en consenso.<br><br>
+<strong>6. Estilo Delegador:</strong> Permite que el equipo tome la decisión, estableciendo límites claros.<br><br>
+En resumen, el modelo de Vroom y Yetton reconoce la importancia de adaptar el liderazgo a las circunstancias y la participación de los subordinados para lograr decisiones efectivas en el entorno empresarial.</p>
+</body>`
+        },
+        {
+          id: 16,
+          title: 'MOTIVACIÓN: Energía, Dirección y Perseverancia',
+          date: 'Agosto 16, 2020',
+          author: 'José Vargas',
+          image: 'https://www.turijobs.com/blog/wp-content/uploads/2018/11/photo-1497561813398-8fcc7a37b567-1024x683.jpeg',
+          description: 'La motivación es un proceso fundamental en la búsqueda del éxito y el logro de metas. En este artículo, exploraremos los tres componentes clave que impulsan nuestra motivación: energía, dirección y perseverancia.',
+          wholeText: `<body>
+    <p style="text-align: left">La motivación es un proceso fundamental en la búsqueda del éxito y el logro de metas. En este artículo, exploraremos los tres componentes clave que impulsan nuestra motivación: energía, dirección y perseverancia.<br><br>
+
+<strong>Energía</strong><br>
+La energía es la fuerza impulsora detrás de nuestros esfuerzos. No basta con simplemente trabajar; debemos hacerlo con intensidad y constancia. Imagina una batería cargada al máximo, lista para alimentar tus acciones hacia tus objetivos. La energía es esa chispa que nos impulsa a avanzar.<br><br>
+
+<strong>Dirección</strong><br>
+La dirección es como un mapa que guía nuestros esfuerzos. Sin ella, podríamos estar dando vueltas sin llegar a ningún destino. Define tus metas con claridad y traza un camino hacia ellas. La dirección nos ayuda a canalizar nuestra energía hacia resultados concretos.<br><br>
+
+<strong>Perseverancia</strong><br>
+La perseverancia es la tenacidad que nos mantiene en el camino, incluso cuando enfrentamos obstáculos. Es la voluntad de seguir adelante, a pesar de las dificultades. Imagina un escalador que, a pesar del cansancio y las adversidades, sigue ascendiendo hacia la cima. Esa es la perseverancia en acción.<br><br>
+
+En resumen, la motivación es más que un simple deseo; es la combinación de energía, dirección y perseverancia que nos impulsa a alcanzar nuestras metas. ¿Qué te motiva hoy?</p>
+</body>`
+        },
+        {
+          id: 17,
+          title: 'Explorando las Teorías de la Motivación: Un Viaje al Interior de la Psicología',
+          date: 'Agosto 20, 2020',
+          author: 'Daniela Romero',
+          image: 'https://economipedia.com/wp-content/uploads/teorias-de-contenido.png',
+          description: 'En el ámbito de la psicología, las teorías sobre la motivación son cruciales para entender cómo los individuos se mueven y actúan en su entorno. Estas teorías se dividen principalmente en dos categorías: no cognoscitivas y cognoscitivas.',
+          wholeText: `<body>
+    <div class="article-container">
+        <p style="text-align: left">En el ámbito de la psicología, las teorías sobre la motivación son cruciales para entender cómo los individuos se mueven y actúan en su entorno. Estas teorías se dividen principalmente en dos categorías: no cognoscitivas y cognoscitivas.</p>
+        <h5 style="text-align: left">Teorías No Cognoscitivas</h5>
+        <ul style="text-align: left">
+          <li>Sostienen que los aspectos internos de una persona son desconocidos e imposibles de conocer.</li>
+          <li>El comportamiento está dirigido y sostenido por el efecto del condicionamiento del refuerzo. Por ejemplo, un comportamiento puede disminuir o cesar si se ignora o se castiga, mientras que puede incrementar o persistir si se refuerza positivamente.</li>
+        </ul>
+          <p style="text-align: left"> </p>
+        <h5 style="text-align: left">Teorías Cognoscitivas</h5>
+        <p style="text-align: left">Están enfocadas hacia los aspectos internos de la persona, como procesos, estados, necesidades, deseos, valores y expectativas. Se dividen en dos enfoques principales: contenido y proceso.</p>
+        <ul style="text-align: left">
+            <li>El enfoque de contenido busca identificar variables específicas que influyen en el comportamiento, como necesidades internas o condiciones externas. Se pregunta qué motiva a la gente y cómo se motiva.</li>
+            <li>El enfoque de proceso se centra en la dinámica de interrelación de variables que influyen en el comportamiento. Las más importantes son: incentivo, impulso, refuerzo y expectativas. Este enfoque busca comprender cómo piensa la persona para predecir su comportamiento futuro.</li>
+        </ul>
+        <p style="text-align: left">En resumen, estas teorías nos ayudan a comprender los mecanismos detrás de la motivación humana y cómo influyen en nuestras acciones y decisiones cotidianas.</p>
+    </div>
+</body>`
+        },
+        {
+          id: 18,
+          title: 'La Jerarquía de las Necesidades Humanas según Abraham Maslow',
+          date: 'Agosto 21, 2020',
+          author: 'Isabella Paez',
+          image: 'https://eb.up-flow.agency/wp-content/uploads/2022/12/image4-4-1024x570.jpg',
+          description: 'En el ámbito de la psicología, la teoría de la jerarquía de las necesidades humanas, desarrollada por Abraham Maslow en 1943, sigue siendo un tema central para entender la motivación humana. Esta teoría propone que la motivación es impulsada por una serie de necesidades que están relativamente separadas y diferenciadas, pero interconectadas en una jerarquía.',
+          wholeText: `<body><p style="text-align: left">
+            En el ámbito de la psicología, la teoría de la jerarquía de las necesidades humanas, desarrollada por Abraham Maslow en 1943, sigue siendo un tema central para entender la motivación humana. Esta teoría propone que la motivación es impulsada por una serie de necesidades que están relativamente separadas y diferenciadas, pero interconectadas en una jerarquía.<br><br>
+
+<strong>¿Cómo funciona esta jerarquía?</strong><br><br>
+
+<strong>1. Necesidades Inferiores:</strong> En la base de la pirámide, encontramos las necesidades más básicas y fundamentales. Estas son las necesidades fisiológicas, como el alimento, el agua, el refugio y el descanso. Cuando estas necesidades no están satisfechas, se convierten en poderosos motivadores.<br><br>
+<strong>2. Necesidades de Seguridad:</strong> Una vez que las necesidades fisiológicas están relativamente atendidas, surge la necesidad de seguridad. Esto incluye la seguridad física, la estabilidad financiera y la protección contra amenazas. Las personas buscan empleo, vivienda segura y un entorno estable.<br><br>
+<strong>3. Necesidades Sociales o de Pertenencia:</strong> A medida que las necesidades de seguridad se satisfacen, surge el deseo de pertenecer a un grupo. Las relaciones sociales, la amistad, el amor y la afiliación son esenciales en esta etapa. La soledad y el aislamiento pueden ser fuertes desencadenantes.<br><br>
+<strong>4. Necesidades de Estima:</strong> Una vez que se satisfacen las necesidades sociales, las personas anhelan reconocimiento y respeto. Esto incluye la autoestima y la estima de los demás. Logros personales, reconocimiento profesional y sentirse valioso son aspectos clave.<br><br>
+<strong>5. Necesidades de Autorrealización:</strong> En la cima de la jerarquía se encuentran las necesidades de autorrealización. Estas son aspiraciones más profundas relacionadas con el crecimiento personal, la creatividad y la realización de nuestro potencial máximo. Las personas buscan significado, propósito y autotrascendencia.<br><br>
+Es importante destacar que las necesidades inferiores nunca se satisfacen completamente; son recurrentes y pueden ser potentes motivadoras si se restringen. Las necesidades superiores emergen cuando las inferiores están relativamente satisfechas. La más alta de estas necesidades monopoliza la mente y guía el comportamiento del individuo.<br><br>
+
+En resumen, la teoría de Maslow nos recuerda que la motivación humana es un proceso complejo y multifacético. A medida que avanzamos en la jerarquía, nuestras aspiraciones se vuelven más profundas y abstractas. Siempre estamos en busca de satisfacer estas necesidades aún más, especialmente cuando las necesidades inferiores están relativamente atendidas.<br><br>
+
+Fuente: Desarrollada por Abraham Maslow en 1943, la teoría de la jerarquía de las necesidades humanas sigue siendo relevante en la comprensión de lo que nos impulsa como seres humanos.
+            </p></body>`
+        },
+        {
+          id: 19,
+          title: 'Explorando la Teoría ERC: Un Enfoque Integral de las Necesidades Humanas',
+          date: 'Agosto 26, 2020',
+          author: 'Daniela Romero',
+          image: 'https://www.lifeder.com/wp-content/uploads/2021/02/personas-organizacion-comportamiento-humano-min.jpg',
+          description: 'Clayton Alderfer, en 1972, propuso una variante de la teoría de la motivación de Maslow, conocida como la Teoría ERC (Existencia, Relaciones y Crecimiento)',
+          wholeText: `<p style="text-align: left">Clayton Alderfer, en 1972, propuso una variante de la teoría de la motivación de Maslow, conocida como la Teoría ERC (Existencia, Relaciones y Crecimiento). Esta teoría simplifica las cinco necesidades de Maslow en tres categorías fundamentales:<br><br>
+
+<strong>1. Existencia:</strong> Se refiere a nuestras necesidades básicas materiales y físicas. Es comparable al nivel fisiológico y de seguridad según Maslow. En otras palabras, abarca la búsqueda de alimento, refugio y seguridad.<br><br>
+<strong>2. Relaciones:</strong> Enfoca la importancia de mantener relaciones interpersonales significativas. Esto se asemeja a las necesidades sociales y de estima externa en la jerarquía de Maslow. Aquí, buscamos conexiones con otros y reconocimiento social.<br><br>
+<strong>3. Crecimiento:</strong> Representa el deseo intrínseco de desarrollo personal. Es similar a las necesidades internas de estima y autorrealización en la teoría de Maslow. En este nivel, aspiramos a crecer, aprender y alcanzar nuestro potencial máximo.<br><br>
+Es relevante destacar que más de una necesidad puede operar simultáneamente. La teoría ERC proporciona una perspectiva interesante sobre cómo las personas buscan satisfacer sus necesidades y cómo estas se entrelazan en nuestra vida cotidiana.</p>`
+        },
+        {
+          id: 20,
+          title: 'Descifrando la Motivación: Una Mirada a la Teoría de David McClelland',
+          date: 'Septiembre 04, 2020',
+          author: 'Helenne Ocanto',
+          image: 'https://impulso06.com/wp-content/uploads/2023/11/La-importancia-de-la-motivacion-en-el-aula-estrategias-para-el-exito-en-primaria-e-infantil.png',
+          description: 'En el apasionante mundo de la psicología y la gestión, la motivación es un tema central. ¿Qué impulsa a las personas a actuar, a esforzarse y a alcanzar sus objetivos? En 1961, el psicólogo David McClelland presentó una teoría que arroja luz sobre estas cuestiones.',
+          wholeText: `<p style="text-align: left">En el apasionante mundo de la psicología y la gestión, la motivación es un tema central. ¿Qué impulsa a las personas a actuar, a esforzarse y a alcanzar sus objetivos? En 1961, el psicólogo David McClelland presentó una teoría que arroja luz sobre estas cuestiones. En este artículo, exploraremos la Teoría de las Necesidades de McClelland y cómo ha influido en la comprensión de la motivación humana.<br><br>
+
+<strong>Las Tres Necesidades Fundamentales</strong><br>
+McClelland identificó tres necesidades adquiridas que desempeñan un papel crucial en nuestra motivación:<br><br>
+
+<strong>1. Necesidad de Logros (nAch):</strong> Esta necesidad se refiere al deseo innato de superar desafíos y alcanzar un alto estándar de excelencia. Las personas con una alta nAch buscan constantemente maneras de mejorar y son persistentes en sus esfuerzos por alcanzar sus metas. Imagina a un escalador que se esfuerza por conquistar la cima de una montaña imponente; esa es la esencia de la nAch.<br><br>
+<strong>2. Necesidad de Poder (nPow):</strong> Aquí entramos en el terreno de la influencia y la dirección. Las personas con una alta nPow están motivadas por la oportunidad de ejercer control y liderazgo. Les atraen las posiciones donde pueden tomar decisiones importantes y afectar el comportamiento de otros. Piensa en un líder carismático que guía a su equipo hacia el éxito; esa es la nPow en acción.<br><br>
+<strong>3. Necesidad de Afiliación (nAff):</strong> Esta necesidad se centra en las relaciones interpersonales. Aquellos con una alta nAff valoran las conexiones humanas y buscan ambientes colaborativos. Les motiva trabajar en equipo y establecer vínculos significativos. Imagina a un mentor que se preocupa por el bienestar de sus colegas; eso es la nAff en su esplendor.<br><br>
+<strong>Implicaciones para la Gestión</strong><br><br>
+McClelland argumentó que los mejores gerentes tienden a tener una alta necesidad de poder y baja afiliación. Están motivados por el logro personal, pero también reconocen la importancia del empoderamiento colectivo. Estos líderes inspiran a sus equipos, toman decisiones audaces y crean un entorno donde la excelencia florece.<br><br>
+
+En resumen, la Teoría de las Necesidades de McClelland nos recuerda que la motivación es un mosaico complejo de impulsos internos. Al comprender estas necesidades fundamentales, podemos diseñar estrategias efectivas para motivar a las personas en el trabajo, en el deporte y en la vida cotidiana.</p>`
+        },
+        {
+          id: 21,
+          title: 'Desentrañando la Teoría de los Dos Factores de la Motivación',
+          date: 'Septiembre 12, 2020',
+          author: 'Isabella Paez',
+          image: 'https://www.userlike.com/api/proxy/resize/medicion-de-la-satisfaccion-del-cliente/measuring.png?height=720',
+          description: 'En 1959, el psicólogo Frederick Herzberg introdujo una teoría revolucionaria que ha tenido un profundo impacto en nuestra comprensión de la motivación y las actitudes humanas hacia el trabajo. Esta teoría, conocida como la Teoría de los Dos Factores, propone que existen dos categorías distintas de factores que influyen en nuestra motivación y satisfacción en el trabajo.',
+          wholeText: `<body style="text-align: left">
+    <p style="text-align: left">En 1959, el psicólogo Frederick Herzberg introdujo una teoría revolucionaria que ha tenido un profundo impacto en nuestra comprensión de la motivación y las actitudes humanas hacia el trabajo. Esta teoría, conocida como la <strong>Teoría de los Dos Factores</strong>, propone que existen dos categorías distintas de factores que influyen en nuestra motivación y satisfacción en el trabajo.</p>
+    <h5 style="text-align: left; font-weight: bolder">Factores Higiénicos (Factores Externos)</h5>
+    <p style="text-align: left">Estos factores se refieren a las condiciones externas que rodean al individuo mientras trabaja. Aunque no tienen la capacidad directa de motivar, son cruciales para prevenir la insatisfacción. Algunos ejemplos de factores higiénicos incluyen:</p>
+    <ul style="text-align: left">
+        <li>Condiciones de Trabajo: El entorno físico en el que se desempeña el trabajo, como la iluminación, la temperatura y la comodidad.</li>
+        <li>Políticas Organizacionales: Las reglas y regulaciones establecidas por la empresa.</li>
+        <li>Relación con el Supervisor: La calidad de la relación entre el empleado y su jefe.</li>
+        <li>Competencia Técnica del Supervisor: La habilidad del supervisor para guiar y apoyar al empleado.</li>
+        <li>Salarios y Beneficios: La compensación económica y los incentivos ofrecidos.</li>
+        <li>Estabilidad en el Cargo: La seguridad laboral y la perspectiva de permanencia en el puesto.</li>
+    </ul>
+    <p style="text-align: left">Aunque estos factores higiénicos no aumentan directamente la satisfacción laboral, su ausencia puede llevar a la insatisfacción. Son esenciales pero no suficientes para motivar a los empleados a alcanzar niveles superiores de rendimiento y satisfacción.</p>
+    <h5 style="text-align: left; font-weight: bolder">Factores Motivadores (Factores Internos)</h5>
+    <p style="text-align: left">Estos factores están relacionados con el contenido real del trabajo y su impacto en el individuo. Los factores motivadores son los que verdaderamente generan satisfacción y motivación. Algunos ejemplos de factores motivadores incluyen:</p>
+    <ul style="text-align: left">
+        <li>Logro Personal: La sensación de logro y éxito en el trabajo.</li>
+        <li>Reconocimiento: La apreciación y el reconocimiento por el esfuerzo y los logros.</li>
+        <li>Responsabilidad: La oportunidad de asumir responsabilidades y desafíos.</li>
+        <li>Crecimiento y Desarrollo: La posibilidad de aprender y crecer profesionalmente.</li>
+        <li>Trabajo Interesante: La naturaleza estimulante e interesante de las tareas laborales.</li>
+    </ul>
+    <p style="text-align: left">Según Herzberg, estos factores motivadores son los que realmente impulsan la satisfacción y la motivación en el trabajo. Son intrínsecos y se relacionan directamente con la experiencia laboral.</p>
+</body>`
+        },
       ]
     }
   },
@@ -313,9 +560,9 @@ En resumen, un reclutamiento efectivo implica una combinación de estrategias, h
     msg: String
   },
   watch:{
-    pageItems(after, before){
-      window.scroll(0, 100);
-    }
+    // pageItems(after, before){
+    // },
+
   },
   components: {
     BPagination
@@ -324,6 +571,7 @@ En resumen, un reclutamiento efectivo implica una combinación de estrategias, h
     pageChanged(event){
       console.log('changed',event)
       this.$router.push({ path: `/blog/${event}` })
+      this.loaded = true
     }
   },
   computed: {
@@ -335,6 +583,7 @@ En resumen, un reclutamiento efectivo implica una combinación de estrategias, h
     pageItems(){
       let showContent
       let term = this.$route.query.searchTerm
+      this.loaded = false
 
       console.log('el term', term)
 
@@ -345,7 +594,9 @@ En resumen, un reclutamiento efectivo implica una combinación de estrategias, h
         showContent = this.blogContent
       }
       this.rows = showContent.length
-      return showContent.slice((this.currentPage - 1) * this.perPage, this.currentPage * this.perPage);
+      let returnedItems = showContent.slice((this.currentPage - 1) * this.perPage, this.currentPage * this.perPage)
+      window.scroll(0, 100);
+      return returnedItems;
 
     }
   }
@@ -371,5 +622,9 @@ li {
 
 a {
   color: #0086ff;
+}
+
+a:hover {
+    color: transparent;
 }
 </style>

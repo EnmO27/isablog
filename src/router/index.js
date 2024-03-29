@@ -7,6 +7,14 @@ Vue.use(VueRouter)
 
 const routes = [
   {
+    path: '/',
+    redirect: to => {
+      // La función recibe la ruta de destino como argumento
+      // Puedes devolver una ruta relativa o un objeto { path: 'profile' }
+      return { path: '/blog/1' };
+    }
+  },
+  {
     path: '/blog/:page',
     name: 'home',
     component: HomeView
@@ -23,6 +31,14 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+  },
+  {
+    path: '/contact',
+    name: 'contact',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views/Contact.vue')
   }
 ]
 
