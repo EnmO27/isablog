@@ -13,8 +13,8 @@ humanblog@blog.com
 `"></p>
 </div>
 
-<div style="display: flex; padding: 5rem; justify-content: end;">
-  <div style="width: 30%;">
+<div class="networks">
+  <div style="margin-bottom: 2rem; margin-top: 2rem;">
     <img style="width: 50px; margin-left: 1rem;" src="../assets/facebook.png">
     <img style="width: 50px; margin-left: 1rem;" src="../assets/instagram.png">
     <img style="width: 50px; margin-left: 1rem;" src="../assets/twitter.png">
@@ -24,3 +24,20 @@ humanblog@blog.com
 
 </div>
 </template>
+
+
+<style scoped>
+@media screen and (min-width: 768px) {
+
+.article-container {
+  padding: 5rem;
+}
+
+.networks {
+  display: flex;
+  padding: 5rem;
+  justify-content: end;
+}
+
+}
+</style>
