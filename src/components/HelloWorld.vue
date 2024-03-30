@@ -1,22 +1,20 @@
 <template>
   <div>
-
     <div v-for="(content, index) of pageItems" :key="index" class="mb-5">
       <div class="mb-4">
         <a :href="`#/read/${content.id}`" class="blog-title">
-          <h3 style="text-align: start; color: #02023b" class="ml-5 mb-1 font-weight-bolder">{{ content.title }}</h3>
+          <h3 style="text-align: start; color: #02023b" class="ml-md-5 mb-md-1 font-weight-bolder">{{ content.title }}</h3>
         </a>
-        <p style="text-align: start;" class="ml-5">{{ `${content.date} por ${content.author}` }}</p>
+        <p style="text-align: start;" class="ml-md-5">{{ `${content.date} por ${content.author}` }}</p>
       </div>
 
       <img style="width: 80%;" :src="content.image" />
-      <p style="text-align: start;" class="px-5 m-5">{{ content.description }}</p>
+      <p style="text-align: start;" class="mt-5 px-md-5 m-md-5">{{ content.description }}</p>
     </div>
 
     <div class="mt-3">
       <b-pagination @change="pageChanged" limit="6" v-model="currentPage" page-class="pagination-thing" :per-page="perPage" :total-rows="rows" align="center"></b-pagination>
     </div>
-
   </div>
 </template>
 

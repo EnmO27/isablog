@@ -1,25 +1,27 @@
 <template>
-  <div id="app">
-    <nav>
-      <b-row class="pr-5 pl-5" style="background-color: #02023b">
-        <b-col class="p-4" md="2">
-          <img @click="$router.push({ path: '/blog/1' })" src="./assets/HUMAN.png" style="width: 60%; cursor: pointer;" />
+  <div id="app" style="width: 100vw;">
+    <nav style="width: 100vw;">
+      <b-row class="px-md-5" style="background-color: #02023b">
+        <b-col class="py-4 p-md-4 d-flex d-md-block justify-content-center" md="2">
+          <div>
+            <img @click="$router.push({ path: '/blog/1' })" src="./assets/HUMAN.png" style="width: 60%; cursor: pointer;" />
+          </div>
         </b-col>
 
-        <b-col class="p-5 d-flex justify-content-end align-items-center" md="10">
+        <b-col class="p-2 p-md-5 d-flex justify-content-center justify-content-md-end align-items-center" md="10">
           <router-link class="mr-3" to="/blog/1">Inicio</router-link> |
           <router-link class="mr-3" to="/about">Sobre nosotros</router-link>
           <router-link class="mr-3" to="/contact">Contacto</router-link>
         </b-col>
       </b-row>
     </nav>
-    <div>
+    <div class="container-fluid" style="width: 100vw;">
       <b-row>
-        <b-col md="8">
+        <b-col col="12" md="8">
           <router-view />
         </b-col>
 
-        <b-col class="p-5" style="background-color: #df5aff" md="4">
+        <b-col class="p-5" style="background-color: #df5aff" col="12" md="4">
           <div class="d-flex">
             <b-form-input @keyup="test_keydown_handler" v-model="searchTerm" placeholder="Buscar"></b-form-input>
             <b-button @click="searchMethod">Buscar</b-button>

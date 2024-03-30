@@ -1,15 +1,15 @@
 <template>
   <div>
 
-    <div v-if="article" style="padding: 5rem;">
-      <h2>{{ article.title }}</h2>
+    <div v-if="article" class="article-container">
+      <h2 class="mt-3 mt-md-0">{{ article.title }}</h2>
       <p style="margin-bottom: 3rem;">{{ `${article.date} por ${article.author}` }}</p>
       <img style="margin-bottom: 5rem; width: 100%;" :src="article.image">
       <p v-html="article.wholeText"></p>
     </div>
 
-    <div style="display: flex; padding: 5rem; justify-content: end;">
-      <div style="width: 30%;">
+    <div class="networks">
+      <div style="margin-bottom: 2rem; margin-top: 2rem;">
         <img style="width: 50px; margin-left: 1rem;" src="../assets/facebook.png">
         <img style="width: 50px; margin-left: 1rem;" src="../assets/instagram.png">
         <img style="width: 50px; margin-left: 1rem;" src="../assets/twitter.png">
@@ -600,5 +600,21 @@ li {
 
 a {
   color: #42b983;
+}
+
+
+
+@media screen and (min-width: 768px) {
+
+  .article-container {
+    padding: 5rem;
+  }
+
+  .networks {
+    display: flex;
+    padding: 5rem;
+    justify-content: end;
+  }
+
 }
 </style>
